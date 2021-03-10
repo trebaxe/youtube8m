@@ -19,7 +19,7 @@ schema = StructType([
 ])
 
 # Aanmaken van Dataframe
-    json_file_path = 'hdfs:///home/maria_dev/youtube8m/Youtube_Video_Dataset.json'
-    df = spark.read.json(json_file_path, schema, multiLine=True)
-    print(df.schema)
-    df.show()
+json_file_path = 'hdfs:///home/maria_dev/youtube8m/Youtube_Video_Dataset.json'
+df = spark.read.json(json_file_path, schema, multiLine=True)
+print(df.schema)
+df.show()
