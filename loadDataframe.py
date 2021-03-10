@@ -18,7 +18,7 @@ schema = StructType([
     StructField('Description', StringType(), True)
 ])
 
-# Aanmaken van Dataframe
+# Aanmaken van Dataframe met path via Hadoop DFS, anders krijg je path error
 json_file_path = 'hdfs:///user/maria_dev/youtube8m/Youtube_Video_Dataset.json'
 df = spark.read.json(json_file_path, schema, multiLine=True)
 print(df.schema)
